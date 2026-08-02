@@ -7,7 +7,7 @@ use App\Models\Product;
 use App\Models\ProductGallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 class ProductController extends Controller
@@ -111,25 +111,20 @@ class ProductController extends Controller
         if (!$request->hasFile($field)) return null;
         $file = $request->file($field);
         $name = Str::uuid().'.'.$file->getClientOriginalExtension();
-        $directory = public_path("uploads/products/$folder");
-        File::ensureDirectoryExists($directory);
-        $file->move($directory, $name);
-        return "uploads/products/$folder/$name";
+        return $file->storeAs("products/$folder", $name, 'public');
     }
 
     private function saveGallery(Request $request, Product $product): void
     {
         foreach ($request->file('gallery_images', []) as $file) {
             $name = Str::uuid().'.'.$file->getClientOriginalExtension();
-            $directory = public_path('uploads/products/galleries');
-            File::ensureDirectoryExists($directory);
-            $file->move($directory, $name);
-            $product->galleries()->create(['image' => "uploads/products/galleries/$name"]);
+            $path = $file->storeAs('products/galleries', $name, 'public');
+            $product->galleries()->create(['image' => $path]);
         }
     }
 
     private function deleteFile(?string $path): void
     {
-        if ($path && is_file(public_path($path))) unlink(public_path($path));
+        if ($path) Storage::disk('public')->delete($path);
     }
 }
