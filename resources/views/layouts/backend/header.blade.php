@@ -121,6 +121,12 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle arrow-none" href="{{ route('products.index') }}" role="button">
+                                <i class="icon nav-icon" data-feather="shopping-bag"></i>
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle arrow-none" href="{{route('careers.index')}}" id="topnav-careers" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="icon nav-icon" data-feather="users"></i>
