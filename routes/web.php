@@ -8,6 +8,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\AdminContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
@@ -32,6 +33,16 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::prefix('products')->name('products.')->group(function () {
+        Route::get('/', [ProductController::class, 'index'])->name('index');
+        Route::get('/create', [ProductController::class, 'create'])->name('create');
+        Route::post('/', [ProductController::class, 'store'])->name('store');
+        Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('edit');
+        Route::put('/{product}', [ProductController::class, 'update'])->name('update');
+        Route::delete('/{product}', [ProductController::class, 'destroy'])->name('destroy');
+        Route::delete('/gallery/{gallery}', [ProductController::class, 'deleteGalleryImage'])->name('gallery.delete');
+    });
+
     Route::group(['prefix' => '/services'], function () {
         Route::get('/index', [ServicesController::class, 'index'])->name('services.index');
         Route::get('/create', [ServicesController::class, 'create'])->name('services.create');
