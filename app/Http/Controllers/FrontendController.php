@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use App\Models\Career;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        $services = Service::where('status', 'active')->with('highlights')->latest()->take(15)->get();
-        return view('welcome', compact('services'));
+        $products = Product::where('status', 'active')->latest()->take(15)->get();
+        return view('welcome', compact('products'));
     }
 
     public function careers()

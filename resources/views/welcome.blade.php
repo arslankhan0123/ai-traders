@@ -329,48 +329,48 @@
             <div class="blog__items__wrapper" style="position: relative;">
                 <div class="swiper service-slider">
                     <div class="swiper-wrapper">
-                        @foreach ($services as $service)
+                        @foreach ($products as $product)
                             <div class="swiper-slide">
                                 <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
                                     <div class="thumb">
-                                        <a href="{{ route('services.details', $service->id) }}"><img
-                                                src="{{ asset($service->feature_image) }}"
+                                        <a href="{{ route('products.details', $product->id) }}"><img
+                                                src="{{ Storage::url($product->feature_image) }}"
                                                 style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
                                                 alt="blog"></a>
                                     </div>
                                     <div class="content">
                                         <h3 class="title" style="color: white;"><a
-                                                href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a>
+                                                href="{{ route('products.details', $product->id) }}">{{ $product->name }}</a>
                                         </h3>
                                         <p class="desc" style="font-size: 14px; color: #666; line-height: 1.5;">
-                                            {{ Str::limit($service->short_description, 60) }}</p>
+                                            {{ Str::limit($product->short_description, 60) }}</p>
                                         <div class="info">
                                             <span class="date"
-                                                style="color: white;">{{ $service->created_at->format('M j, Y') }}</span>
+                                                style="color: white;">{{ $product->created_at->format('M j, Y') }}</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
-                        @if(count($services) > 0 && count($services) < 8)
-                            @foreach ($services as $service)
+                        @if(count($products) > 0 && count($products) < 8)
+                            @foreach ($products as $product)
                                 <div class="swiper-slide">
                                     <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
                                         <div class="thumb">
-                                            <a href="{{ route('services.details', $service->id) }}"><img
-                                                    src="{{ asset($service->feature_image) }}"
+                                            <a href="{{ route('products.details', $product->id) }}"><img
+                                                    src="{{ Storage::url($product->feature_image) }}"
                                                     style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
                                                     alt="blog"></a>
                                         </div>
                                         <div class="content">
                                             <h3 class="title" style="color: white;"><a
-                                                    href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a>
+                                                    href="{{ route('products.details', $product->id) }}">{{ $product->name }}</a>
                                             </h3>
                                             <p class="desc" style="font-size: 14px; color: #666; line-height: 1.5;">
-                                                {{ Str::limit($service->short_description, 60) }}</p>
+                                                {{ Str::limit($product->short_description, 60) }}</p>
                                             <div class="info">
                                                 <span class="date"
-                                                    style="color: white;">{{ $service->created_at->format('M j, Y') }}</span>
+                                                    style="color: white;">{{ $product->created_at->format('M j, Y') }}</span>
                                             </div>
                                         </div>
                                     </div>
