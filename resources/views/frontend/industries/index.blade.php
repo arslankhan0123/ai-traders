@@ -84,15 +84,4 @@
         @endforeach
     </div>
 </section>
-
-<section class="rts-section-gap" style="background:#001a19;">
-    <div class="container text-center">
-        <div class="section-title">
-            <span class="sub-title" style="color:#34A853;">Need Something Specific?</span>
-            <h2 class="heading-title-two text-white">Let Our Global Network Work for You</h2>
-            <p class="text-white-50 mx-auto mb-4" style="max-width:760px;">Tell us what you need. Our team will explore suitable products, brands, pricing and availability through our international sourcing network.</p>
-            <a href="{{ route('contact') }}" class="rts-btn btn-primary">Contact Our Team <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </div>
-</section>
 @endsection

@@ -1,10 +1,11 @@
+@include('frontend.shared.company-cta')
 <footer class="rts__footer__area__two rts-section-gapTop2" style="background-color: #001514;">
     <div class="container">
-        <div class="footer-contact-info text-center">
+        <!-- <div class="footer-contact-info text-center">
             <span class="subtitle" style="color: #34A853;">Industrial Solution Provider</span>
             <h2 class="title" style="color: white;">Your Global Partner for <br> Industrial Solutions</h2>
             <a href="{{ route('contact') }}" class="rts-btn btn-primary">Contact Our Team <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
+        </div> -->
         <div class="footer-brand-widget">
             <div class="footer-brand">
                 <a href="{{ route('home') }}" class="logo">
