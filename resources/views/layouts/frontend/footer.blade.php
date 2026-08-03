@@ -1,16 +1,16 @@
 <footer class="rts__footer__area__two rts-section-gapTop2" style="background-color: #001514;">
     <div class="container">
         <div class="footer-contact-info text-center">
-            <span class="subtitle" style="color: #34A853;">Artistry in Every Acre</span>
-            <h2 class="title" style="color: white;">Transform Your Property with <br> Diamond Landscapes</h2>
-            <a href="{{ route('contact') }}" class="rts-btn btn-primary">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
+            <span class="subtitle" style="color: #34A853;">Industrial Solution Provider</span>
+            <h2 class="title" style="color: white;">Your Global Partner for <br> Industrial Solutions</h2>
+            <a href="{{ route('contact') }}" class="rts-btn btn-primary">Contact Our Team <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="footer-brand-widget">
             <div class="footer-brand" style="max-width: 350px;">
                 <a href="{{ route('home') }}" class="logo">
                     <img src="{{ asset('logo.png') }}" alt="logo" style="max-height: 80px; width: auto;">
                 </a>
-                <p class="desc" style="color: rgba(255, 255, 255, 0.7); margin-top: 20px;">Transform your outdoor space with expert landscaping and maintenance solutions. From stunning hardscapes to lush lawn care, we bring your vision to life with precision and care.</p>
+                <p class="desc" style="color: rgba(255, 255, 255, 0.7); margin-top: 20px;">Alberta International Traders is a Calgary-based trading company creating commercial flows, importing and exporting products, and managing international projects with trusted global partners.</p>
                 <!-- <div class="footer-social" style="margin-top: 30px;">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -25,7 +25,8 @@
                     <ul class="widget-list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="{{ route('about') }}">About</a></li>
-                        <li><a href="{{ route('services') }}">Services</a></li>
+                        <li><a href="{{ route('services') }}">Solutions</a></li>
+                        <li><a href="{{ route('home') }}#products">Products</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
                         <li><a href="{{ route('faq') }}">FAQs</a></li>
                         <li><a href="{{ route('gallery') }}">Our Gallery</a></li>
@@ -34,22 +35,23 @@
                     </ul>
                 </div>
                 <div class="single-widget">
-                    <h3 class="widget-title">Why Choose Us:</h3>
+                    <h3 class="widget-title">Why Choose AIT:</h3>
                     <ul class="widget-list">
-                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Fully Insured</li>
-                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Residential & Commercial</li>
-                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Free Estimates</li>
-                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Locally Owned & Operated</li>
-                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Reliable Year-Round Service</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Global Product Sourcing</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Reputable Manufacturers</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Quality Products</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Reliable Customer Service</li>
+                        <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Effective Supply Chain</li>
                     </ul>
                 </div>
                 <div class="single-widget">
                     <h3 class="widget-title" style="color: white;">Location & Contact:</h3>
                     <ul class="widget-list">
-                        <!-- <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Diamond Landscapes HQ</a></li> -->
-                        <li><a href="https://maps.google.com/?q=Calgary,+Alberta" style="color: rgba(255, 255, 255, 0.7);"><b>Address:</b> Calgary, Alberta</a></li>
-                        <li><a href="tel:+14039191974" style="color: rgba(255, 255, 255, 0.7);"><b>Phone:</b> (403) 919-1974</a></li>
-                        <li><a href="mailto:info@diamondlandscapes.ca" style="color: rgba(255, 255, 255, 0.7);"><b>Email:</b> info@diamondlandscapes.ca</a></li>
+                        <li><a href="https://maps.google.com/?q=Calgary,+Alberta,+Canada" style="color: rgba(255, 255, 255, 0.7);"><b>Address:</b> Calgary, Alberta, Canada</a></li>
+                        <li><a href="tel:+14039090602" style="color: rgba(255, 255, 255, 0.7);"><b>Canada:</b> +1 403-909-0602</a></li>
+                        <li><a href="tel:+966596039208" style="color: rgba(255, 255, 255, 0.7);"><b>Gulf:</b> +966 59 603 9208</a></li>
+                        <li><a href="mailto:info@albertainternationaltraders.com" style="color: rgba(255, 255, 255, 0.7);"><b>Email:</b> info@albertainternationaltraders.com</a></li>
+                        <li><a href="https://www.albertainternationaltraders.com" target="_blank" rel="noopener" style="color: rgba(255, 255, 255, 0.7);"><b>Web:</b> AlbertaInternationalTraders.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,13 +59,13 @@
     </div>
     <div class="footer__copyright__wrapper">
         <div class="container">
-            <p style="color: rgba(255, 255, 255, 0.7); text-align: center; margin-bottom: 0;"><b>Service Areas:</b> Calgary, Chestermere, Airdrie, Okotoks, Cochrane</p>
+            <p style="color: rgba(255, 255, 255, 0.7); text-align: center; margin-bottom: 0;"><b>Global Solutions:</b> Industrial Equipment, Construction Equipment, Construction Materials, Food & Beverage Equipment</p>
             <div class="footer__copyright">
                 <div class="copyright">
                     <p>
                         <script>
                             document.write(new Date().getFullYear());
-                        </script>©<span>diamondlandscapes</span>. All rights
+                        </script>&copy; <span>Alberta International Traders</span>. All rights
                         reserved.
                     </p>
                 </div>
