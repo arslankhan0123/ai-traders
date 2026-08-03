@@ -86,6 +86,106 @@
             .service-prev { left: 5px; }
             .service-next { right: 5px; }
         }
+
+        /* Autonomous homepage motion */
+        @keyframes aitCardFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes aitImageBreathe {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.035); filter: brightness(1.06); }
+        }
+
+        @keyframes aitSoftGlow {
+            0%, 100% { box-shadow: 0 10px 28px rgba(0, 37, 36, 0.08); }
+            50% { box-shadow: 0 18px 42px rgba(52, 168, 83, 0.2); }
+        }
+
+        @keyframes aitShineSweep {
+            0% { transform: translateX(-160%) skewX(-18deg); }
+            45%, 100% { transform: translateX(260%) skewX(-18deg); }
+        }
+
+        @keyframes aitContentDrift {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .rts__banner__area .banner-content {
+            animation: aitContentDrift 5s ease-in-out infinite;
+        }
+
+        .rts__project__area .project__single__item,
+        .rts__blog__area .single-blog-item,
+        .rts__choose__area .choose__single__items {
+            animation: aitCardFloat 5s ease-in-out infinite, aitSoftGlow 5s ease-in-out infinite;
+            will-change: transform, box-shadow;
+        }
+
+        .rts__project__area .col-xl-3:nth-child(1) .project__single__item,
+        .rts__blog__area .swiper-slide:nth-child(3n+1) .single-blog-item {
+            animation-delay: 0s;
+        }
+
+        .rts__project__area .col-xl-5 .project__single__item,
+        .rts__blog__area .swiper-slide:nth-child(3n+2) .single-blog-item,
+        .rts__choose__area .choose__single__items:nth-child(2) {
+            animation-delay: .8s;
+        }
+
+        .rts__project__area .col-xl-3:nth-child(3) .project__single__item,
+        .rts__blog__area .swiper-slide:nth-child(3n) .single-blog-item {
+            animation-delay: 1.6s;
+        }
+
+        .rts__project__area .thumb,
+        .rts__blog__area .thumb,
+        .rts__choose__area .choose-images {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .rts__project__area .thumb::after,
+        .rts__blog__area .thumb::after,
+        .rts__choose__area .choose-images::after {
+            content: '';
+            position: absolute;
+            inset: -20% auto -20% -45%;
+            width: 28%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .38), transparent);
+            animation: aitShineSweep 5.5s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .rts__project__area .thumb img,
+        .rts__blog__area .thumb img,
+        .rts__choose__area .choose-images > img {
+            animation: aitImageBreathe 7s ease-in-out infinite;
+            will-change: transform, filter;
+        }
+
+        .rts__blog__area .swiper-slide:nth-child(even) .thumb::after {
+            animation-delay: 1.4s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .rts__banner__area .banner-content,
+            .rts__project__area .project__single__item,
+            .rts__blog__area .single-blog-item,
+            .rts__choose__area .choose__single__items,
+            .rts__project__area .thumb img,
+            .rts__blog__area .thumb img,
+            .rts__choose__area .choose-images > img,
+            .rts__project__area .thumb::after,
+            .rts__blog__area .thumb::after,
+            .rts__choose__area .choose-images::after {
+                animation: none !important;
+            }
+        }
     </style>
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
