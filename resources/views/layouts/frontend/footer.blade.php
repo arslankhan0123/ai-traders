@@ -46,6 +46,9 @@
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="{{ route('about') }}">About</a></li>
                         <li><a href="{{ route('industries') }}">Industries</a></li>
+                        <li><a href="{{ route('global-sourcing') }}">Global Sourcing</a></li>
+                        <li><a href="{{ route('projects') }}">Projects</a></li>
+                        <li><a href="{{ route('partners-vendors') }}">Partners & Vendors</a></li>
                         <!-- <li><a href="{{ route('services') }}">Solutions</a></li> -->
                         <li><a href="{{ route('home') }}#products">Products</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>

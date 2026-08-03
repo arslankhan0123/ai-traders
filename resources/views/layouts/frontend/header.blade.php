@@ -34,6 +34,18 @@
                         </a>
                     </li>
 
+                    <li class="has-dropdown">
+                        <a href="{{ route('global-sourcing') }}"
+                            class="{{ request()->routeIs('global-sourcing', 'projects', 'partners-vendors') ? 'active-menu' : '' }}" style="color: white;">
+                            Company
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-service"><a href="{{ route('global-sourcing') }}"><i class="fa-solid fa-arrow-right-long"></i> Global Sourcing</a></li>
+                            <li class="menu-item-service"><a href="{{ route('projects') }}"><i class="fa-solid fa-arrow-right-long"></i> Projects</a></li>
+                            <li class="menu-item-service"><a href="{{ route('partners-vendors') }}"><i class="fa-solid fa-arrow-right-long"></i> Partners & Vendors</a></li>
+                        </ul>
+                    </li>
+
                     <!-- <li class="has-dropdown">
                         <a href="{{ route('services') }}"
                             class="{{ request()->routeIs('services') ? 'active-menu' : '' }}" style="color: white;">

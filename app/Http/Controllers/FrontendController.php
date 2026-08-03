@@ -38,6 +38,21 @@ class FrontendController extends Controller
         return view('frontend.industries.index');
     }
 
+    public function globalSourcing()
+    {
+        return view('frontend.global-sourcing.index');
+    }
+
+    public function projects()
+    {
+        return view('frontend.projects.index');
+    }
+
+    public function partnersVendors()
+    {
+        return view('frontend.partners-vendors.index');
+    }
+
     public function contact()
     {
         $services = Service::where('status', 'active')->latest()->get();
