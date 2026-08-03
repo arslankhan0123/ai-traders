@@ -50,8 +50,8 @@
                         <li><a href="https://maps.google.com/?q=Calgary,+Alberta,+Canada" style="color: rgba(255, 255, 255, 0.7);"><b>Address:</b> Calgary, Alberta, Canada</a></li>
                         <li><a href="tel:+14039090602" style="color: rgba(255, 255, 255, 0.7);"><b>Canada:</b> +1 403-909-0602</a></li>
                         <li><a href="tel:+966596039208" style="color: rgba(255, 255, 255, 0.7);"><b>Gulf:</b> +966 59 603 9208</a></li>
-                        <li><a href="mailto:info@albertainternationaltraders.com" style="color: rgba(255, 255, 255, 0.7);"><b>Email:</b> info@albertainternationaltraders.com</a></li>
-                        <li><a href="https://www.albertainternationaltraders.com" target="_blank" rel="noopener" style="color: rgba(255, 255, 255, 0.7);"><b>Web:</b> AlbertaInternationalTraders.com</a></li>
+                        <li><a href="mailto:info@aittraders.com" style="color: rgba(255, 255, 255, 0.7);"><b>Email:</b> info@aittraders.com</a></li>
+                        <li><a href="https://www.aittraders.com" target="_blank" rel="noopener" style="color: rgba(255, 255, 255, 0.7);"><b>Web:</b> aittraders.com</a></li>
                     </ul>
                 </div>
             </div>
