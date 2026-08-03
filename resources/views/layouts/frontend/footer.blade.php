@@ -21,20 +21,6 @@
 
             <div class="footer-widget-wrapper">
                 <div class="single-widget">
-                    <h3 class="widget-title">Quick Links:</h3>
-                    <ul class="widget-list">
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="{{ route('about') }}">About</a></li>
-                        <li><a href="{{ route('services') }}">Solutions</a></li>
-                        <li><a href="{{ route('home') }}#products">Products</a></li>
-                        <li><a href="{{ route('contact') }}">Contact</a></li>
-                        <li><a href="{{ route('faq') }}">FAQs</a></li>
-                        <li><a href="{{ route('gallery') }}">Our Gallery</a></li>
-                        <!-- <li><a href="{{ route('reviews') }}">Reviews</a></li> -->
-                        <li><a href="{{ route('quote') }}">Request a Quote</a></li>
-                    </ul>
-                </div>
-                <div class="single-widget">
                     <h3 class="widget-title">Why Choose AIT:</h3>
                     <ul class="widget-list">
                         <li style="color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: #34A853;"></i> Global Product Sourcing</li>
@@ -52,6 +38,20 @@
                         <li><a href="tel:+966596039208" style="color: rgba(255, 255, 255, 0.7);"><b>Gulf:</b> +966 59 603 9208</a></li>
                         <li><a href="mailto:info@aittraders.com" style="color: rgba(255, 255, 255, 0.7);"><b>Email:</b> info@aittraders.com</a></li>
                         <li><a href="https://www.aittraders.com" target="_blank" rel="noopener" style="color: rgba(255, 255, 255, 0.7);"><b>Web:</b> aittraders.com</a></li>
+                    </ul>
+                </div>
+                <div class="single-widget">
+                    <h3 class="widget-title">Quick Links:</h3>
+                    <ul class="widget-list">
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About</a></li>
+                        <!-- <li><a href="{{ route('services') }}">Solutions</a></li> -->
+                        <li><a href="{{ route('home') }}#products">Products</a></li>
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
+                        <!-- <li><a href="{{ route('faq') }}">FAQs</a></li> -->
+                        <!-- <li><a href="{{ route('gallery') }}">Our Gallery</a></li> -->
+                        <!-- <li><a href="{{ route('reviews') }}">Reviews</a></li> -->
+                        <li><a href="{{ route('quote') }}">Request a Quote</a></li>
                     </ul>
                 </div>
             </div>
@@ -98,7 +98,7 @@
     }
 
     .rts__footer__area__two .footer-widget-wrapper .single-widget:first-child {
-        padding-left: 30px !important;
+        padding-left: 50px !important;
     }
 
     @media (max-width: 991px) {
