@@ -6,7 +6,7 @@
             <a href="{{ route('contact') }}" class="rts-btn btn-primary">Contact Our Team <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="footer-brand-widget">
-            <div class="footer-brand" style="max-width: 350px;">
+            <div class="footer-brand">
                 <a href="{{ route('home') }}" class="logo">
                     <img src="{{ asset('logo.png') }}" alt="logo" style="max-height: 80px; width: auto;">
                 </a>
@@ -77,3 +77,45 @@
         </div>
     </div>
 </footer>
+
+<style>
+    .rts__footer__area__two .footer-brand-widget {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 40px !important;
+        align-items: start !important;
+    }
+
+    .rts__footer__area__two .footer-brand,
+    .rts__footer__area__two .single-widget {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+    }
+
+    .rts__footer__area__two .footer-widget-wrapper {
+        display: contents !important;
+    }
+
+    .rts__footer__area__two .footer-widget-wrapper .single-widget:first-child {
+        padding-left: 30px !important;
+    }
+
+    @media (max-width: 991px) {
+        .rts__footer__area__two .footer-brand-widget {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 35px !important;
+        }
+
+        .rts__footer__area__two .footer-widget-wrapper .single-widget:first-child {
+            padding-left: 0 !important;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .rts__footer__area__two .footer-brand-widget {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+        }
+    }
+</style>
