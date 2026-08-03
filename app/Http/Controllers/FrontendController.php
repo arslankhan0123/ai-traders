@@ -33,6 +33,11 @@ class FrontendController extends Controller
         return view('frontend.about.index', compact('products'));
     }
 
+    public function industries()
+    {
+        return view('frontend.industries.index');
+    }
+
     public function contact()
     {
         $services = Service::where('status', 'active')->latest()->get();

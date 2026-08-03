@@ -45,6 +45,7 @@
                     <ul class="widget-list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="{{ route('about') }}">About</a></li>
+                        <li><a href="{{ route('industries') }}">Industries</a></li>
                         <!-- <li><a href="{{ route('services') }}">Solutions</a></li> -->
                         <li><a href="{{ route('home') }}#products">Products</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>

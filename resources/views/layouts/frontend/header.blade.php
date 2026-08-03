@@ -27,7 +27,14 @@
                         </a>
                     </li>
 
-                    <li class="has-dropdown">
+                    <li>
+                        <a href="{{ route('industries') }}" class="{{ request()->routeIs('industries') ? 'active-menu' : '' }}"
+                            style="color: white;">
+                            Industries
+                        </a>
+                    </li>
+
+                    <!-- <li class="has-dropdown">
                         <a href="{{ route('services') }}"
                             class="{{ request()->routeIs('services') ? 'active-menu' : '' }}" style="color: white;">
                             Services
@@ -48,13 +55,6 @@
 
                                 {{-- Irrigation jaisa pehle tha --}}
                                 @elseif(stripos($category->name, 'irrigation') !== false)
-                                    <!-- <li class="menu-item-category" style="cursor: pointer;">
-                                        <a href="{{ route('services') }}?category={{ $category->slug }}"
-                                        class="category-label"
-                                        style="display:block;color:black !important;text-decoration:none;">
-                                            {{ $category->name }}
-                                        </a>
-                                    </li> -->
                                     <li class="menu-item-category">
                                         <span class="category-label">{{ $category->name }}</span>
                                     </li>
@@ -92,28 +92,8 @@
                                 @endif
 
                             @endforeach
-                            <!-- @foreach($header_categories as $category)
-                                @if(stripos($category->name, 'irrigation') !== false || stripos($category->name, 'landscaping') !== false)
-                                    <li class="menu-item-category" style="cursor: pointer;">
-                                        <a href="{{ route('services') }}?category={{ $category->slug }}" class="category-label" style="display: block; color:black !important; text-decoration: none;">
-                                            {{ $category->name }}
-                                        </a>
-                                    </li>
-                                @else
-                                    <li class="menu-item-category">
-                                        <span class="category-label">{{ $category->name }}</span>
-                                    </li>
-                                    @foreach($category->services as $service)
-                                        <li class="menu-item-service">
-                                            <a href="{{ route('services.details', $service->id) }}">
-                                                <i class="fa-solid fa-arrow-right-long"></i> {{ $service->name }}
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                @endif
-                            @endforeach -->
                         </ul>
-                    </li>
+                    </li> -->
 
                     <li class="has-dropdown">
                         <a href="{{ route('home') }}#products"
