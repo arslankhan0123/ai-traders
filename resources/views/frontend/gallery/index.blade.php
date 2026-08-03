@@ -1,6 +1,6 @@
 @extends('layouts.frontend.main')
 
-@section('title', 'Gallery | Diamond Landscapes')
+@section('title', 'Product Gallery | Alberta International Traders')
 
 @section('content')
 <style>
@@ -115,13 +115,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="rts__breadcrumb__content"
-                    data-bg-src="{{ asset('services_page_bg.jpeg') }}">
+                    data-bg-src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
                     <ul class="list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
-                        <li>Our Project Gallery</li>
+                        <li>Product Gallery</li>
                     </ul>
-                    <h2 class="title rts-text-anime">Our Project Gallery</h2>
+                    <h2 class="title rts-text-anime">Our Product Gallery</h2>
                 </div>
             </div>
         </div>
@@ -134,8 +134,8 @@
     <div class="container">
         <div class="row mb--50 text-center">
             <div class="col-lg-12">
-                <span class="subtitle" style="color: #34A853;">Visual Portfolio</span>
-                <h2 class="title" style="color: white;">A Glimpse of Our Work</h2>
+                <span class="subtitle" style="color: #34A853;">Our Lines of Business</span>
+                <h2 class="title" style="color: white;">Industrial Products & Equipment</h2>
             </div>
         </div>
 
@@ -144,25 +144,25 @@
                 <div class="swiper-wrapper">
                     @php
                     $gallery_items = [
-                    ['img' => '5.jpg', 'title' => 'Custom Stone Patio', 'cat' => 'Hardscape'],
-                    ['img' => '15.JPEG', 'title' => 'Fresh Sod Lawn Installation', 'cat' => 'Landscaping / Sod Installation / Lawn Services'],
-                    ['img' => '6.jpg', 'title' => 'Modern Cedar Deck', 'cat' => 'Decks'],
-                    ['img' => '14.JPEG', 'title' => 'Sod Installation', 'cat' => 'Landscaping / Lawn Installation'],
-                    ['img' => '7.jpg', 'title' => 'Office Park Maintenance', 'cat' => 'Commercial'],
-                    ['img' => '13.JPEG', 'title' => 'Mulch Installation', 'cat' => 'Landscaping / Mulching Services'],
-                    ['img' => '3.jpg', 'title' => 'Smart Sprinkler System', 'cat' => 'Irrigation'],
-                    ['img' => '16.jpg', 'title' => 'Bark Mulch Installation', 'cat' => 'Landscaping / Mulch Installation / Garden Bed Services'],
-                    ['img' => '2.jpg', 'title' => 'Lawn Restoration', 'cat' => 'Before & After'],
-                    ['img' => '12.JPEG', 'title' => 'Decorative Rock Installation', 'cat' => 'Landscaping / Rock & Gravel Installation'],
-                    ['img' => '1.jpg', 'title' => 'Retaining Wall', 'cat' => 'Hardscape'],
-                    ['img' => '11.JPEG', 'title' => 'Weed Barrier Fabric Installation', 'cat' => 'Landscaping / Weed Control / Ground Preparation'],
+                    ['img' => 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=85', 'title' => 'General Industry Machinery', 'cat' => 'Industrial Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85', 'title' => 'Engines & Turbines', 'cat' => 'Industrial Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=85', 'title' => 'Pumps & Oil Field Machinery', 'cat' => 'Industrial Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85', 'title' => 'Cranes & Heavy Machinery', 'cat' => 'Construction Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=900&q=85', 'title' => 'Excavators & Backhoes', 'cat' => 'Construction Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=85', 'title' => 'Loaders & Dump Trucks', 'cat' => 'Construction Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85', 'title' => 'Glass, Metal & Ceramics', 'cat' => 'Construction Materials'],
+                    ['img' => 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85', 'title' => 'Wood, Brick & Block', 'cat' => 'Construction Materials'],
+                    ['img' => 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85', 'title' => 'Natural Building Materials', 'cat' => 'Construction Materials'],
+                    ['img' => 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=900&q=85', 'title' => 'Food Processing Equipment', 'cat' => 'Food & Beverage Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=85', 'title' => 'Mixers, Tanks & Filters', 'cat' => 'Food & Beverage Equipment'],
+                    ['img' => 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85', 'title' => 'Packaging & Plant Equipment', 'cat' => 'Food & Beverage Equipment'],
                     ];
                     @endphp
 
                     @foreach ($gallery_items as $item)
                     <div class="swiper-slide">
                         <div class="single-gallery-item">
-                            <img src="{{ asset('frontend/assets/images/' . $item['img']) }}"
+                            <img src="{{ $item['img'] }}"
                                 alt="{{ $item['title'] }}"
                                 style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover;">
                             <div class="content">
@@ -199,7 +199,7 @@
 
             <div class="gallery-card h-100">
                 <div class="gallery-image-wrapper">
-                    <img src="{{ asset('frontend/assets/images/' . $item['img']) }}"
+                    <img src="{{ $item['img'] }}"
                         alt="{{ $item['title'] }}"
                         class="gallery-image">
                 </div>
