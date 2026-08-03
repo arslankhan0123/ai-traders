@@ -19,10 +19,10 @@
                             <tr>
                                 <th>S.No</th>
                                 <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Service</th>
-                                <th>Property</th>
+                                <th>Company</th>
+                                <th>Product</th>
+                                <th>Business Line</th>
+                                <th>Country</th>
                                 <th>Date</th>
                                 <th>Action</th>
                             </tr>
@@ -32,16 +32,10 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $quote->name }}</td>
-                                <td>{{ $quote->email }}</td>
-                                <td>{{ $quote->phone }}</td>
-                                <td>
-                                    @if($quote->service)
-                                        {{ $quote->service->name }}
-                                    @else
-                                        {{ str_replace('_', ' ', ucfirst($quote->service_id)) }}
-                                    @endif
-                                </td>
-                                <td>{{ ucfirst($quote->property_type) }}</td>
+                                <td>{{ $quote->company_name ?: 'Individual' }}</td>
+                                <td>{{ $quote->product?->name ?: 'Other / Not Listed' }}</td>
+                                <td>{{ $quote->business_line ? ucwords(str_replace('_', ' ', $quote->business_line)) : 'Legacy Request' }}</td>
+                                <td>{{ $quote->country ?: '-' }}</td>
                                 <td>{{ $quote->created_at->format('M d, Y') }}</td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Quote Actions">

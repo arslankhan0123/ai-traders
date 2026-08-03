@@ -51,8 +51,8 @@ class FrontendController extends Controller
 
     public function quote()
     {
-        $services = Service::where('status', 'active')->latest()->get();
-        return view('frontend.quote.index', compact('services'));
+        $products = Product::where('status', 'active')->orderBy('name')->get();
+        return view('frontend.quote.index', compact('products'));
     }
 
     public function faq()

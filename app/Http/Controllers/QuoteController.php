@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Quote;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class QuoteController extends Controller
 {
@@ -14,15 +15,26 @@ class QuoteController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'company_name' => 'nullable|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:255',
-            'service_id' => 'required|string',
-            'property_type' => 'required|string',
+            'country' => 'required|string|max:255',
+            'product_id' => 'nullable|exists:products,id',
+            'business_line' => ['required', Rule::in(['industrial_equipment', 'construction_equipment', 'construction_materials', 'food_beverage_equipment'])],
+            'equipment_condition' => ['nullable', Rule::in(['new', 'used', 'either'])],
+            'quantity' => 'nullable|string|max:100',
+            'required_by' => 'nullable|date|after_or_equal:today',
             'message' => 'required|string',
         ]);
 
         try {
-            Quote::create($request->all());
+            $data = $request->only([
+                'name', 'company_name', 'email', 'phone', 'country', 'product_id',
+                'business_line', 'equipment_condition', 'quantity', 'required_by', 'message',
+            ]);
+            // Keep the legacy required column populated for existing database compatibility.
+            $data['property_type'] = $data['business_line'];
+            Quote::create($data);
             return response()->json([
                 'status' => 'success',
                 'message' => 'Your quote request has been sent successfully!'
@@ -40,7 +52,7 @@ class QuoteController extends Controller
      */
     public function index()
     {
-        $quotes = Quote::with('service')->latest()->get();
+        $quotes = Quote::with('product')->latest()->get();
         return view('admin.quotes.index', compact('quotes'));
     }
 
@@ -49,7 +61,7 @@ class QuoteController extends Controller
      */
     public function show($id)
     {
-        $quote = Quote::with('service')->findOrFail($id);
+        $quote = Quote::with('product')->findOrFail($id);
         return view('admin.quotes.show', compact('quote'));
     }
 
