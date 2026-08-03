@@ -101,16 +101,16 @@
         </div>
     @endif
     <!-- rts banner area two -->
-    <section class="rts__banner__area " data-bg-src="{{ asset('services/6.jpg') }}"
+    <section class="rts__banner__area " data-bg-src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&amp;fit=crop&amp;w=1920&amp;q=85"
         style="background-size: cover; background-position: center;">
         <div class="container-1520">
             <div class="rts-banner-wrapper-two">
                 <div class="banner-content">
                     <!-- <span class="icon"><img src="https://html.themewant.com/greenaro/assets/images/banner/sun.webp" width="60" alt="sun"></span> -->
-                    <h1 class="banner-title rts-text-anime">Premium Landscaping for <br> Homes & Businesses </h1>
-                    <p class="desc">Transform your outdoor space with expert landscaping and maintenance solutions. From
-                        stunning hardscapes to lush lawn care, we bring your vision to life with precision and care.</p>
-                    <a href="{{ route('contact') }}" class="rts-btn btn-primary">Book a Service <i
+                    <h1 class="banner-title rts-text-anime">Global Industrial Solutions for <br> Every Business Need </h1>
+                    <p class="desc">Alberta International Traders delivers cost-effective products, equipment and materials
+                        through a trusted global network, creating reliable commercial flows that exceed customer expectations.</p>
+                    <a href="{{ route('contact') }}" class="rts-btn btn-primary">Contact Our Team <i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="banner-reivew">
@@ -268,10 +268,10 @@
         <div class="container">
             <div class="rts-section-title-area">
                 <div class="section-title">
-                    <span class="sub-title">Portfolio</span>
-                    <h2 class="heading-title-two rts-text-anime">Featured Projects</h2>
+                    <span class="sub-title">Our Expertise</span>
+                    <h2 class="heading-title-two rts-text-anime">Lines of Business</h2>
                 </div>
-                <a href="{{ route('services') }}" class="rts-btn btn-primary">View All Work <i
+                <a href="{{ route('services') }}" class="rts-btn btn-primary">Explore Our Solutions <i
                         class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="project__wrapper__two">
@@ -279,36 +279,36 @@
                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="project__single__item wow fadeInUp" data-wow-delay=".2s">
                             <div class="thumb">
-                                <a href="{{ route('services') }}"><img src="{{ asset('project-1.jpg') }}"
-                                        style="width: 100%; max-height: 300px; object-fit: cover;" alt="img"></a>
+                                <a href="{{ route('services') }}"><img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                                        style="width: 100%; max-height: 300px; object-fit: cover;" alt="Industrial equipment and machinery"></a>
                             </div>
                             <div class="content">
-                                <h3 class="title"><a href="{{ route('services') }}">Backyard Patio Upgrade</a></h3>
-                                <p class="desc">Transform your outdoor space with our premium patio upgrade services.</p>
+                                <h3 class="title"><a href="{{ route('services') }}">Industrial Equipment</a></h3>
+                                <p class="desc">Engines, turbines, pumps, fire hydrants, oil field machinery and general industrial equipment.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6 col-md-6">
                         <div class="project__single__item wow fadeInUp" data-wow-delay=".4s">
                             <div class="thumb">
-                                <a href="{{ route('services') }}"><img src="{{ asset('project-2.jpg') }}"
-                                        style="width: 100%; max-height: 400px; object-fit: cover;" alt="img"></a>
+                                <a href="{{ route('services') }}"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"
+                                        style="width: 100%; max-height: 400px; object-fit: cover;" alt="Construction equipment and job site"></a>
                             </div>
                             <div class="content">
-                                <h3 class="title"><a href="{{ route('services') }}">Spring Cleanup</a></h3>
-                                <p class="desc">Prepare your property for the new season with our comprehensive spring cleanup services.</p>
+                                <h3 class="title"><a href="{{ route('services') }}">Construction Equipment</a></h3>
+                                <p class="desc">Cranes, Bobcats, bulldozers, front loaders, dump trucks, backhoes and excavators for every job.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-6">
                         <div class="project__single__item wow fadeInUp" data-wow-delay=".6s">
                             <div class="thumb">
-                                <a href="{{ route('services') }}"><img src="{{ asset('project-3.jpg') }}"
-                                        style="width: 100%; max-height: 300px; object-fit: cover;" alt="img"></a>
+                                <a href="{{ route('services') }}"><img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                                        style="width: 100%; max-height: 300px; object-fit: cover;" alt="Construction materials and steel structures"></a>
                             </div>
                             <div class="content">
-                                <h3 class="title"><a href="{{ route('services') }}">Front Yard Rock Installation</a></h3>
-                                <p class="desc">Enhance your front yard with our custom rock installation services.</p>
+                                <h3 class="title"><a href="{{ route('services') }}">Construction Materials</a></h3>
+                                <p class="desc">Professional-grade wood, brick, block, metal, glass, ceramics, plastic and natural building materials.</p>
                             </div>
                         </div>
                     </div>
@@ -318,13 +318,12 @@
     </section>
     <!-- rts project area end -->
 
-    <section class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
+    <section id="products" class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
         <div class="container-1428">
             <div class="section-title text-center">
-                <span class="sub-title" style="color: white;">Our Services</span>
-                <h2 class="heading-title-two rts-text-anime" style="color: white;">Comprehensive Outdoor Solutions</h2>
-                <p>We offer a wide range of landscaping and property maintenance services designed to enhance the beauty and
-                    value of your property.</p>
+                <span class="sub-title" style="color: white;">Our Products</span>
+                <h2 class="heading-title-two rts-text-anime" style="color: white;">Reliable Products for Global Industry</h2>
+                <p>We source quality products from reputable manufacturers and provide solutions tailored to the diverse demands of our customers.</p>
             </div>
             <div class="blog__items__wrapper" style="position: relative;">
                 <div class="swiper service-slider">
@@ -428,9 +427,8 @@
         <div class="container-1428">
             <div class="section-title text-center">
                 <span class="sub-title">Why Choose Us</span>
-                <h2 class="heading-title-two rts-text-anime">The Diamond Landscapes Edge</h2>
-                <p class="desc">We combine creative artistry, technical skill, and reliable <br> maintenance to deliver
-                    landscapes that exceed expectations.</p>
+                <h2 class="heading-title-two rts-text-anime">The AIT Advantage</h2>
+                <p class="desc">We combine global sourcing, responsive service and reliable supply-chain management <br> to deliver greater value for every customer.</p>
             </div>
             <div class="choose-items-wrapper-two">
                 <div class="row gy-5 gy-lg-0">
@@ -450,8 +448,8 @@
                                     <i class="fa-solid fa-calendar-check" style="font-size: 20px; color: #34A853;"></i>
                                 </div>
                                 <div class="content">
-                                    <h3 class="title">Reliable Maintenance</h3>
-                                    <p class="desc style-2">Scheduled care for your property year-round.</p>
+                                    <h3 class="title">Strong Relationships</h3>
+                                    <p class="desc style-2">Open, honest communication builds lasting trust with customers and suppliers.</p>
                                 </div>
                             </div>
                             <div class="choose__single__items wow fadeInUp" data-wow-delay=".6s">
@@ -459,16 +457,16 @@
                                     <i class="fa-solid fa-headset" style="font-size: 20px; color: #34A853;"></i>
                                 </div>
                                 <div class="content">
-                                    <h3 class="title">Dedicated Support</h3>
-                                    <p class="desc">Always available for your landscape needs.</p>
+                                    <h3 class="title">Customer-Focused Service</h3>
+                                    <p class="desc">Responsive solutions designed to meet needs and exceed quality expectations.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-6">
                         <div class="choose-images wow fadeInUp" data-wow-delay=".2s">
-                            <img src="{{ asset('frontend/assets/images/1.jpg') }}"
-                                style="width: 100%; max-height: 500px; object-fit: cover;" alt="img">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                                style="width: 100%; max-height: 500px; object-fit: cover;" alt="AIT global industrial solutions">
                             <!-- <ul class="round-shape">
                                 <li class="one">
                                     <i class="fa-light fa-plus" data-bs-toggle="tooltip" data-bs-placement="top"

@@ -86,4 +86,13 @@ class FrontendController extends Controller
 
         return view('frontend.services.details', compact('service', 'services', 'prevService', 'nextService'));
     }
+
+    public function productsDetails($id)
+    {
+        $product = Product::with('category', 'galleries')
+            ->where('status', 'active')
+            ->findOrFail($id);
+
+        return view('frontend.products.details', compact('product'));
+    }
 }

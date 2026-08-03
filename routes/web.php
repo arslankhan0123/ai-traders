@@ -26,8 +26,8 @@ Route::post('/quote/store', [QuoteController::class, 'store'])->name('quote.stor
 Route::group(['prefix' => '/services'], function () {
     Route::get('/all', [FrontendController::class, 'services'])->name('services');
     Route::get('/details/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
-    Route::get('/details/{id}', [FrontendController::class, 'productsDetails'])->name('products.details');
 });
+Route::get('/products/details/{id}', [FrontendController::class, 'productsDetails'])->name('products.details');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

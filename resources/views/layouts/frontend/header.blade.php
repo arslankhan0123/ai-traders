@@ -115,6 +115,34 @@
                         </ul>
                     </li>
 
+                    <li class="has-dropdown">
+                        <a href="{{ route('home') }}#products"
+                            class="{{ request()->routeIs('products.details') ? 'active-menu' : '' }}" style="color: white;">
+                            Products
+                        </a>
+
+                        <ul class="sub-menu">
+                            @forelse($header_categories->filter(fn ($category) => $category->products->isNotEmpty()) as $category)
+                                <li class="menu-item-category">
+                                    <span class="category-label">{{ $category->name }}</span>
+                                </li>
+
+                                @foreach($category->products as $product)
+                                    <li class="menu-item-service">
+                                        <a href="{{ route('products.details', $product->id) }}">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            {{ $product->name }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            @empty
+                                <li class="menu-item-service">
+                                    <span class="px-3 py-2 d-block text-muted">No products available</span>
+                                </li>
+                            @endforelse
+                        </ul>
+                    </li>
+
                     <li>
                         <a href="{{ route('gallery') }}"
                             class="{{ request()->routeIs('gallery') ? 'active-menu' : '' }}" style="color: white;">
