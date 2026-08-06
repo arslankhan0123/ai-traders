@@ -24,8 +24,9 @@
             <div class="card-body p-4 p-md-5 bg-white">
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <label class="text-muted small text-uppercase fw-bold mb-1">Customer Name</label>
+                        <label class="text-muted small text-uppercase fw-bold mb-1">Contact Name</label>
                         <h5 class="text-dark fw-bold">{{ $quote->name }}</h5>
+                        @if($quote->company_name)<p class="mb-0 text-muted">{{ $quote->company_name }}</p>@endif
                     </div>
                     <div class="col-md-6 text-md-end">
                         <label class="text-muted small text-uppercase fw-bold mb-1">Date Submitted</label>
@@ -33,34 +34,46 @@
                     </div>
                 </div>
 
-                <div class="row mb-4 pb-4 border-bottom">
-                    <div class="col-md-4">
+                <div class="row g-4 mb-4 pb-4 border-bottom">
+                    <div class="col-md-3">
                         <label class="text-muted small text-uppercase fw-bold mb-1">Email Address</label>
                         <p class="mb-0"><a href="mailto:{{ $quote->email }}" class="text-primary fw-semibold">{{ $quote->email }}</a></p>
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-3">
                         <label class="text-muted small text-uppercase fw-bold mb-1">Phone Number</label>
                         <p class="mb-0 text-dark fw-semibold">{{ $quote->phone }}</p>
                     </div>
-                    <div class="col-md-4 text-md-end">
-                        <label class="text-muted small text-uppercase fw-bold mb-1">Property Type</label>
-                        <p class="mb-0 text-dark fw-semibold">{{ ucfirst($quote->property_type) }}</p>
+                    <div class="col-md-3">
+                        <label class="text-muted small text-uppercase fw-bold mb-1">Country / Delivery</label>
+                        <p class="mb-0 text-dark fw-semibold">{{ $quote->country ?: '-' }}</p>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="text-muted small text-uppercase fw-bold mb-1">Business Line</label>
+                        <p class="mb-0 text-dark fw-semibold">{{ $quote->business_line ? ucwords(str_replace('_', ' ', $quote->business_line)) : 'Legacy Request' }}</p>
                     </div>
                 </div>
 
-                <div class="mb-4 pt-2">
-                    <label class="text-muted small text-uppercase fw-bold mb-1">Interested Service</label>
-                    <h5 class="text-dark fw-bold">
-                        @if($quote->service)
-                            {{ $quote->service->name }}
-                        @else
-                            {{ str_replace('_', ' ', ucfirst($quote->service_id)) }}
-                        @endif
-                    </h5>
+                <div class="row g-4 mb-4 pt-2">
+                    <div class="col-md-3">
+                        <label class="text-muted small text-uppercase fw-bold mb-1">Product</label>
+                        <h5 class="text-dark fw-bold">{{ $quote->product?->name ?: 'Other / Not Listed' }}</h5>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="text-muted small text-uppercase fw-bold mb-1">Condition</label>
+                        <p class="mb-0 text-dark fw-semibold">{{ $quote->equipment_condition ? ucfirst($quote->equipment_condition) : '-' }}</p>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="text-muted small text-uppercase fw-bold mb-1">Quantity</label>
+                        <p class="mb-0 text-dark fw-semibold">{{ $quote->quantity ?: '-' }}</p>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="text-muted small text-uppercase fw-bold mb-1">Required By</label>
+                        <p class="mb-0 text-dark fw-semibold">{{ $quote->required_by?->format('M d, Y') ?: 'Not specified' }}</p>
+                    </div>
                 </div>
 
                 <div class="mb-5 p-4 bg-light rounded-4">
-                    <label class="text-muted small text-uppercase fw-bold mb-3 d-block">Project Details</label>
+                    <label class="text-muted small text-uppercase fw-bold mb-3 d-block">Product Specifications / Requirements</label>
                     <div class="text-dark" style="line-height: 1.8; white-space: pre-wrap;">{{ $quote->message }}</div>
                 </div>
 

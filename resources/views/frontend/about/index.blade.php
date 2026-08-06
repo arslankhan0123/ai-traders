@@ -196,13 +196,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="rts__breadcrumb__content"
-                    data-bg-src="{{ asset('about_page_bg.jpeg') }}">
+                    data-bg-src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
                     <ul class="list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
                         <li><a href="{{ route('about') }}">About Us</a></li>
                     </ul>
-                    <h2 class="title rts-text-anime">About Diamond Landscapes</h2>
+                    <h2 class="title rts-text-anime">About Alberta International Traders</h2>
                 </div>
             </div>
         </div>
@@ -216,8 +216,8 @@
         <div class="row gy-5">
             <div class="col-lg-6">
                 <div class="about__img">
-                    <img src="{{ asset('frontend/assets/images/about/1.jpg') }}" style="width: 100%; max-height: 500px;"
-                        alt="about">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" style="width: 100%; max-height: 500px; object-fit: cover;"
+                        alt="Alberta International Traders industrial solutions">
                     <div class="about__circle">
                         <!-- <div class="rts__circle">
                                 <svg class="spinner" viewBox="0 0 100 100">
@@ -237,7 +237,7 @@
                 <div class="about__content style-3">
                     <div class="section-title">
                         <span class="sub-title">About Company</span>
-                        <h2 class="heading-title rts-text-animes">Crafting Exceptional Landscapes Since 1999</h2>
+                        <h2 class="heading-title rts-text-animes">Connecting Businesses with Global Industrial Solutions</h2>
                     </div>
                     <div class="rts-tabs">
                         <div class="nav-tabs" role="tablist">
@@ -255,45 +255,38 @@
                             <div class="tab-pane show active" id="nav-mission" role="tabpanel"
                                 aria-labelledby="mission-tab" tabindex="0">
                                 <div class="desc">
-                                    <p>To transform outdoor spaces into beautiful, functional environments through
-                                        innovative design, meticulous craftsmanship, and a deep commitment to our
-                                        clients' vision.</p>
-                                    <p>Our mission is to enhance the natural beauty of every property we touch, ensuring
-                                        lasting value and aesthetic appeal through professional landscaping excellence.
-                                    </p>
+                                    <p>Our mission is to meet the increasing and diversified demands of our customers by providing quality products, reliable services and solutions sourced from reputable manufacturers.</p>
+                                    <p>We strive to become our customers' preferred supplier, deliver timely market information and build professional partnerships that support sales, service and long-term growth.</p>
                                 </div>
                                 <div class="about__stats">
                                     <div class="about-stats__item">
                                         <h3 class="about-stats__number"><span class="odometer"
-                                                data-count="1200">0</span>+</h3>
-                                        <p class="about-stats__label">Projects Completed</p>
+                                                data-count="4">0</span></h3>
+                                        <p class="about-stats__label">Core Business Sectors</p>
                                     </div>
                                     <div class="about-stats__item">
-                                        <h3 class="about-stats__number"><span class="odometer" data-count="25">0</span>+
+                                        <h3 class="about-stats__number"><span class="odometer" data-count="2">0</span>
                                         </h3>
-                                        <p class="about-stats__label">Years of Experience</p>
+                                        <p class="about-stats__label">Regional Contacts</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane show" id="nav-vision" role="tabpanel" aria-labelledby="vision-tab"
                                 tabindex="0">
                                 <div class="desc">
-                                    <p>To be the premier landscaping partner in the region, recognized for our artistic
-                                        innovation, unwavering reliability, and the superior quality of our outdoor
-                                        transformations.</p>
-                                    <p>We envision a future where every garden and commercial space we manage becomes a
-                                        benchmark for excellence and sustainability in the landscaping industry.</p>
+                                    <p>Our vision is to foster growth and enduring business ties by remaining responsive to customers and committed to excellence in every interaction.</p>
+                                    <p>Through global sourcing and effective supply-chain management, we aim to deliver the right equipment and materials to each customer's door while creating lasting value.</p>
                                 </div>
                                 <div class="about__stats mt-35">
                                     <div class="about-stats__item">
                                         <h3 class="about-stats__number"><span class="odometer"
-                                                data-count="500">0</span>+</h3>
-                                        <p class="about-stats__label">Commercial Contracts</p>
+                                                data-count="4">0</span></h3>
+                                        <p class="about-stats__label">Product Categories</p>
                                     </div>
                                     <div class="about-stats__item">
-                                        <h3 class="about-stats__number"><span class="odometer" data-count="15">0</span>+
+                                        <h3 class="about-stats__number"><span class="odometer" data-count="2">0</span>
                                         </h3>
-                                        <p class="about-stats__label">Industry Awards</p>
+                                        <p class="about-stats__label">International Markets</p>
                                     </div>
                                 </div>
                             </div>
@@ -317,7 +310,7 @@
 <!-- brand area -->
 <div class="rts__brand__area ">
     <div class="container">
-        <h2 class="brand-title rts-text-anime">Trusted by Leading Property Managers and Businesses for Over 25 Years
+        <h2 class="brand-title rts-text-anime">Backed by a Global Network of Suppliers, Contacts and Sources
         </h2>
         <div class="brand__slide__wrapper">
             <div class="swiper brand__slider">
@@ -368,58 +361,57 @@
 <section class="rts__blog__area rts-section-gap " style="background-color: #001a19;">
     <div class="container-1428">
         <div class="section-title text-center">
-            <span class="sub-title" style="color: white;">Our Services</span>
-            <h2 class="heading-title-two rts-text-anime" style="color: white;">Comprehensive Outdoor Solutions</h2>
-            <p>We offer a wide range of landscaping and property maintenance services designed to enhance the beauty and
-                value of your property.</p>
+            <span class="sub-title" style="color: white;">Our Products</span>
+            <h2 class="heading-title-two rts-text-anime" style="color: white;">Products for Global Industry</h2>
+            <p>We source products globally to provide competitive options, proven technologies and better value for customers across diverse industries.</p>
         </div>
         <div class="blog__items__wrapper" style="position: relative;">
             <div class="swiper service-slider">
                 <div class="swiper-wrapper">
-                    @foreach ($services as $service)
+                    @foreach ($products as $product)
                     <div class="swiper-slide">
                         <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="thumb">
-                                <a href="{{ route('services.details', $service->id) }}"><img
-                                        src="{{ asset($service->feature_image) }}"
+                                <a href="{{ route('products.details', $product->id) }}"><img
+                                        src="{{ Storage::url($product->feature_image) }}"
                                         style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
-                                        alt="blog"></a>
+                                        alt="{{ $product->name }}"></a>
                             </div>
                             <div class="content">
                                 <h3 class="title" style="color: white;"><a
-                                        href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a>
+                                        href="{{ route('products.details', $product->id) }}">{{ $product->name }}</a>
                                 </h3>
                                 <p class="desc" style="font-size: 14px; color: #666; line-height: 1.5;">
-                                    {{ Str::limit($service->short_description, 60) }}
+                                    {{ Str::limit($product->short_description, 60) }}
                                 </p>
                                 <div class="info">
                                     <span class="date"
-                                        style="color: white;">{{ $service->created_at->format('M j, Y') }}</span>
+                                        style="color: white;">{{ $product->created_at->format('M j, Y') }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
-                    @if (count($services) > 0 && count($services) < 8)
-                        @foreach ($services as $service)
+                    @if (count($products) > 0 && count($products) < 8)
+                        @foreach ($products as $product)
                         <div class="swiper-slide">
                         <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="thumb">
-                                <a href="{{ route('services.details', $service->id) }}"><img
-                                        src="{{ asset($service->feature_image) }}"
+                                <a href="{{ route('products.details', $product->id) }}"><img
+                                        src="{{ Storage::url($product->feature_image) }}"
                                         style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
-                                        alt="blog"></a>
+                                        alt="{{ $product->name }}"></a>
                             </div>
                             <div class="content">
                                 <h3 class="title" style="color: white;"><a
-                                        href="{{ route('services.details', $service->id) }}">{{ $service->name }}</a>
+                                        href="{{ route('products.details', $product->id) }}">{{ $product->name }}</a>
                                 </h3>
                                 <p class="desc" style="font-size: 14px; color: #666; line-height: 1.5;">
-                                    {{ Str::limit($service->short_description, 60) }}
+                                    {{ Str::limit($product->short_description, 60) }}
                                 </p>
                                 <div class="info">
                                     <span class="date"
-                                        style="color: white;">{{ $service->created_at->format('M j, Y') }}</span>
+                                        style="color: white;">{{ $product->created_at->format('M j, Y') }}</span>
                                 </div>
                             </div>
                         </div>
@@ -775,7 +767,7 @@
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <span class="text">
                                             <span class="number">01.</span>
-                                            <span class="title">How long does a typical landscaping project take?</span>
+                                            <span class="title">What products and industries does AIT serve?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
@@ -783,8 +775,7 @@
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        The timeline depends on the scope. Small garden updates might take a few days,
-                                        while complex hardscape projects can take 2-4 weeks.
+                                        We supply industrial equipment, construction equipment, construction materials, and food and beverage commercial equipment for customers across multiple industries.
                                     </div>
                                 </div>
                             </div>
@@ -794,7 +785,7 @@
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">02.</span>
-                                            <span class="title">Do you provide ongoing maintenance services?</span>
+                                            <span class="title">Can AIT source equipment from international suppliers?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
@@ -802,8 +793,7 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse"
                                     data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Yes, we offer flexible maintenance plans for both residential and commercial
-                                        properties, covering everything from mowing to pruning.
+                                        Yes. We maintain an extensive global network of suppliers, contacts and sources, with access to different brands based on each customer's requirements.
                                     </div>
                                 </div>
                             </div>
@@ -814,7 +804,7 @@
                                         aria-controls="collapseThree">
                                         <span class="text">
                                             <span class="number">03.</span>
-                                            <span class="title">Can you help with irrigation system design?</span>
+                                            <span class="title">Can your team help select the right equipment?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
@@ -822,8 +812,7 @@
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Absolutely. We specialize in designing and installing efficient irrigation
-                                        systems tailored to the specific needs of your landscape.
+                                        Yes. Our experienced team helps customers assess equipment type, size, pricing and availability so they can select the right solution for the job.
                                     </div>
                                 </div>
                             </div>
@@ -834,7 +823,7 @@
                                         aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">04.</span>
-                                            <span class="title">What materials do you use for hardscaping?</span>
+                                            <span class="title">Which construction materials do you supply?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
@@ -842,8 +831,7 @@
                                 <div id="collapseFour" class="accordion-collapse collapse"
                                     data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        We use premium materials including natural stone, high-quality pavers, and
-                                        durable timber to ensure longevity and aesthetic appeal.
+                                        We source natural building materials, mud and clay, rock, wood, brick and block, metal, glass, ceramics, plastic, foam and other professional-grade supplies.
                                     </div>
                                 </div>
                             </div>
@@ -854,7 +842,7 @@
                                         aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">05.</span>
-                                            <span class="title">Are your landscaping services affordable?</span>
+                                            <span class="title">How does AIT ensure quality and reliable service?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
@@ -862,8 +850,7 @@
                                 <div id="collapseFive" class="accordion-collapse collapse"
                                     data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        We provide competitive pricing and can tailor our designs to fit various budgets
-                                        while maintaining high standards of quality.
+                                        We source from reputable manufacturers, maintain open communication and manage the supply chain from sourcing through delivery, with a strong focus on customer expectations.
                                     </div>
                                 </div>
                             </div>

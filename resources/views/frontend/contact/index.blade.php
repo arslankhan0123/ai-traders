@@ -201,13 +201,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="rts__breadcrumb__content" data-bg-src="{{ asset('contact_page_bg.jpeg') }}">
+                <div class="rts__breadcrumb__content" data-bg-src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
                     <ul class="list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
                     </ul>
-                    <h2 class="title rts-text-anime">Contact Diamond Landscapes</h2>
+                    <h2 class="title rts-text-anime">Contact Alberta International Traders</h2>
                 </div>
             </div>
         </div>
@@ -252,8 +252,9 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <span class="title">Email Us</span>
-                            <a href="mailto:info@diamondlandscapes.ca">info@diamondlandscapes.ca</a>
+                            <span class="title">Email & Web</span>
+                            <a href="mailto:info@aittraders.com">info@aittraders.com</a>
+                            <a href="https://www.aittraders.com" target="_blank" rel="noopener">aittraders.com</a>
                         </div>
                     </div>
                 </div>
@@ -266,7 +267,8 @@
                         </div>
                         <div class="content">
                             <span class="title">Call Us</span>
-                            <a href="tel:+14039191974">(403) 919-1974</a>
+                            <a href="tel:+14039090602">Canada: +1 403-909-0602</a>
+                            <a href="tel:+966596039208">Gulf: +966 59 603 9208</a>
                         </div>
                     </div>
                 </div>
@@ -284,7 +286,7 @@
                         </div>
                         <div class="content">
                             <span class="title">Our Location</span>
-                            <a href="https://maps.google.com/?q=Calgary,+Alberta" target="_blank">Calgary, Alberta</a>
+                            <a href="https://maps.google.com/?q=Calgary,+Alberta,+Canada" target="_blank">Calgary, Alberta, Canada</a>
                         </div>
                     </div>
                 </div>
@@ -302,8 +304,8 @@
                 <div class="col-lg-12">
                     <div class="rts__contact__form">
                         <div class="section-title">
-                            <span class="sub-title">Contact</span>
-                            <h2 class="heading-title rts-text-anime">Let's Connect & Start Something Great</h2>
+                            <span class="sub-title">Contact AIT</span>
+                            <h2 class="heading-title rts-text-anime">Let's Discuss Your Product Requirements</h2>
                         </div>
                         <form action="{{ route('contact.store') }}" method="POST" class="contact__form-wrapper">
                             @csrf
@@ -335,7 +337,7 @@
                                 <div class="col-12">
                                     <div class="form__input">
                                         <label for="message">Message *</label>
-                                        <textarea name="message" id="message" placeholder="Your Message.." required></textarea>
+                                        <textarea name="message" id="message" placeholder="Tell us about the products, equipment or materials you need.." required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -398,14 +400,14 @@
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <span class="text">
                                             <span class="number">01.</span>
-                                            <span class="title">How long does a typical landscaping project take?</span>
+                                            <span class="title">What products and industries does AIT serve?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        The timeline depends on the scope. Small garden updates might take a few days, while complex hardscape projects can take 2-4 weeks.
+                                        We supply industrial equipment, construction equipment, construction materials, and food and beverage commercial equipment for customers across diverse industries.
                                     </div>
                                 </div>
                             </div>
@@ -414,14 +416,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">02.</span>
-                                            <span class="title">Do you provide ongoing maintenance services?</span>
+                                            <span class="title">Can AIT source products internationally?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Yes, we offer flexible maintenance plans for both residential and commercial properties, covering everything from mowing to pruning.
+                                        Yes. We use an extensive global network of suppliers, contacts and sources to provide different brands and solutions based on customer requirements.
                                     </div>
                                 </div>
                             </div>
@@ -430,14 +432,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <span class="text">
                                             <span class="number">03.</span>
-                                            <span class="title">Can you help with irrigation system design?</span>
+                                            <span class="title">Can your team help us select the right equipment?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        Absolutely. We specialize in designing and installing efficient irrigation systems tailored to the specific needs of your landscape.
+                                        Yes. Our experienced team can assist with equipment type, size, pricing and availability to help identify the right solution for your operation.
                                     </div>
                                 </div>
                             </div>
@@ -446,14 +448,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">04.</span>
-                                            <span class="title">What materials do you use for hardscaping?</span>
+                                            <span class="title">Which construction materials can AIT supply?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        We use premium materials including natural stone, high-quality pavers, and durable timber to ensure longevity and aesthetic appeal.
+                                        We source rock, wood, brick and block, metal, glass, ceramics, plastic, foam, mud and clay, natural building materials and other professional-grade supplies.
                                     </div>
                                 </div>
                             </div>
@@ -462,14 +464,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
                                         <span class="text">
                                             <span class="number">05.</span>
-                                            <span class="title">Are your landscaping services affordable?</span>
+                                            <span class="title">How does AIT provide reliable service?</span>
                                         </span>
                                         <i class="fa-solid fa-chevron-down icon"></i>
                                     </button>
                                 </div>
                                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#rts-faq-accordion">
                                     <div class="accordion-body">
-                                        We provide competitive pricing and can tailor our designs to fit various budgets while maintaining high standards of quality.
+                                        We source from reputable manufacturers, communicate openly and manage the supply chain from sourcing through delivery with a focus on quality and customer expectations.
                                     </div>
                                 </div>
                             </div>

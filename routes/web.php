@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
+Route::get('/industries', [FrontendController::class, 'industries'])->name('industries');
+Route::get('/global-sourcing', [FrontendController::class, 'globalSourcing'])->name('global-sourcing');
+Route::get('/projects', [FrontendController::class, 'projects'])->name('projects');
+Route::get('/partners-vendors', [FrontendController::class, 'partnersVendors'])->name('partners-vendors');
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
 Route::get('/careers/details/{slug}', [FrontendController::class, 'careerDetails'])->name('careers.details');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
@@ -27,6 +31,7 @@ Route::group(['prefix' => '/services'], function () {
     Route::get('/all', [FrontendController::class, 'services'])->name('services');
     Route::get('/details/{id}', [FrontendController::class, 'servicesDetails'])->name('services.details');
 });
+Route::get('/products/details/{id}', [FrontendController::class, 'productsDetails'])->name('products.details');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

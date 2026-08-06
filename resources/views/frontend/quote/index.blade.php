@@ -1,6 +1,6 @@
 @extends('layouts.frontend.main')
 
-@section('title', 'Request a Quote | Diamond Landscapes')
+@section('title', 'Request a Quote | Alberta International Traders')
 
 @section('content')
 <style>
@@ -31,13 +31,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="rts__breadcrumb__content" data-bg-src="{{ asset('services_page_bg.jpeg') }}">
+                <div class="rts__breadcrumb__content" data-bg-src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
                     <ul class="list">
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><i class="fa-solid fa-chevron-right"></i></li>
                         <li>Request a Quote</li>
                     </ul>
-                    <h2 class="title rts-text-anime">Request a Free Quote</h2>
+                    <h2 class="title rts-text-anime">Request a Product Quote</h2>
                 </div>
             </div>
         </div>
@@ -51,9 +51,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-area-center">
-                    <span class="subtitle" style="color: #34A853;">Get an Estimate</span>
-                    <h2 class="title">Tell Us About Your Project</h2>
-                    <p class="desc mt--20" style="color: rgba(255,255,255,0.7); max-width: 700px; margin-left: auto; margin-right: auto;">Fill out the form below for a quick estimate. We offer free consultations for both residential and commercial projects, including maintenance contracts.</p>
+                    <span class="subtitle" style="color: #34A853;">Global Product Sourcing</span>
+                    <h2 class="title">Tell Us What Your Business Needs</h2>
+                    <p class="desc mt--20" style="color: rgba(255,255,255,0.7); max-width: 700px; margin-left: auto; margin-right: auto;">Share your equipment, material or commercial product requirements. Our team will review specifications, sourcing options, pricing and availability.</p>
                 </div>
             </div>
         </div>
@@ -71,6 +71,12 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="single-input">
+                                    <label for="company_name" style="color: white; margin-bottom: 10px; display: block;">Company Name</label>
+                                    <input type="text" name="company_name" id="company_name" placeholder="Your Company" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px;">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input">
                                     <label for="email" style="color: white; margin-bottom: 10px; display: block;">Email Address*</label>
                                     <input type="email" name="email" id="email" placeholder="example@mail.com" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px;">
                                 </div>
@@ -83,35 +89,60 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="single-input">
-                                    <label for="service_id" style="color: white; margin-bottom: 10px; display: block;">Interested Service*</label>
-                                    <select name="service_id" id="service_id" style="background: #001a19; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; appearance: auto;" required>
-                                        <option value="">Select a Service</option>
-                                        @foreach($services as $service)
-                                        <option value="{{ $service->id }}">{{ $service->name }}</option>
-                                        @endforeach
-                                        <option value="commercial_maintenance">Commercial Maintenance Contract</option>
+                                    <label for="country" style="color: white; margin-bottom: 10px; display: block;">Country / Delivery Location*</label>
+                                    <input type="text" name="country" id="country" placeholder="e.g. Canada or Saudi Arabia" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px;">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <label for="business_line" style="color: white; margin-bottom: 10px; display: block;">Business Line*</label>
+                                    <select name="business_line" id="business_line" style="background: #001a19; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; appearance: auto;" required>
+                                        <option value="">Select a Business Line</option>
+                                        <option value="industrial_equipment">Industrial Equipment</option>
+                                        <option value="construction_equipment">Construction Equipment</option>
+                                        <option value="construction_materials">Construction Materials</option>
+                                        <option value="food_beverage_equipment">Food & Beverage Commercial Equipment</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <div class="single-input">
-                                    <label for="property_type" style="color: white; margin-bottom: 10px; display: block;">Property Type*</label>
-                                    <div class="d-flex gap-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="property_type" id="residential" value="residential" checked>
-                                            <label class="form-check-label" for="residential" style="color: white;">Residential</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="property_type" id="commercial" value="commercial">
-                                            <label class="form-check-label" for="commercial" style="color: white;">Commercial</label>
-                                        </div>
-                                    </div>
+                                    <label for="product_id" style="color: white; margin-bottom: 10px; display: block;">Specific Product</label>
+                                    <select name="product_id" id="product_id" style="background: #001a19; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; appearance: auto;">
+                                        <option value="">Other / Not Listed</option>
+                                        @foreach($products as $product)
+                                        <option value="{{ $product->id }}">{{ $product->name }} ({{ $product->sku }})</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <label for="equipment_condition" style="color: white; margin-bottom: 10px; display: block;">Preferred Condition</label>
+                                    <select name="equipment_condition" id="equipment_condition" style="background: #001a19; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; appearance: auto;">
+                                        <option value="">Not Applicable</option>
+                                        <option value="new">New</option>
+                                        <option value="used">Used</option>
+                                        <option value="either">New or Used</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <label for="quantity" style="color: white; margin-bottom: 10px; display: block;">Quantity</label>
+                                    <input type="text" name="quantity" id="quantity" placeholder="e.g. 10 units or 500 tonnes" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px;">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <label for="required_by" style="color: white; margin-bottom: 10px; display: block;">Required By</label>
+                                    <input type="date" name="required_by" id="required_by" min="{{ now()->format('Y-m-d') }}" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px; color-scheme: dark;">
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="single-input">
-                                    <label for="message" style="color: white; margin-bottom: 10px; display: block;">Project Details*</label>
-                                    <textarea name="message" id="message" rows="5" placeholder="Please describe your project or requirements..." required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px;"></textarea>
+                                    <label for="message" style="color: white; margin-bottom: 10px; display: block;">Product Specifications / Requirements*</label>
+                                    <textarea name="message" id="message" rows="5" placeholder="Describe the required product, model, size, technical specifications, preferred brand and delivery requirements..." required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 15px; width: 100%; border-radius: 5px;"></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-12 text-center mt--30">

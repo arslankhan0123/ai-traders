@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use App\Models\Career;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        $services = Service::where('status', 'active')->with('highlights')->latest()->take(15)->get();
-        return view('welcome', compact('services'));
+        $products = Product::where('status', 'active')->latest()->take(15)->get();
+        return view('welcome', compact('products'));
     }
 
     public function careers()
@@ -28,8 +29,28 @@ class FrontendController extends Controller
 
     public function about()
     {
-        $services = Service::where('status', 'active')->latest()->get();
-        return view('frontend.about.index', compact('services'));
+        $products = Product::where('status', 'active')->latest()->get();
+        return view('frontend.about.index', compact('products'));
+    }
+
+    public function industries()
+    {
+        return view('frontend.industries.index');
+    }
+
+    public function globalSourcing()
+    {
+        return view('frontend.global-sourcing.index');
+    }
+
+    public function projects()
+    {
+        return view('frontend.projects.index');
+    }
+
+    public function partnersVendors()
+    {
+        return view('frontend.partners-vendors.index');
     }
 
     public function contact()
@@ -50,8 +71,8 @@ class FrontendController extends Controller
 
     public function quote()
     {
-        $services = Service::where('status', 'active')->latest()->get();
-        return view('frontend.quote.index', compact('services'));
+        $products = Product::where('status', 'active')->orderBy('name')->get();
+        return view('frontend.quote.index', compact('products'));
     }
 
     public function faq()
@@ -84,5 +105,14 @@ class FrontendController extends Controller
         $nextService = Service::where('status', 'active')->where('id', '>', $id)->orderBy('id', 'asc')->first();
 
         return view('frontend.services.details', compact('service', 'services', 'prevService', 'nextService'));
+    }
+
+    public function productsDetails($id)
+    {
+        $product = Product::with('category', 'galleries')
+            ->where('status', 'active')
+            ->findOrFail($id);
+
+        return view('frontend.products.details', compact('product'));
     }
 }

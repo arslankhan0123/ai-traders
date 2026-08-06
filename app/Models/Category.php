@@ -23,4 +23,12 @@ class Category extends Model
     {
         return $this->hasMany(Service::class);
     }
+
+    /**
+     * Get the products that belong to the category.
+     */
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
