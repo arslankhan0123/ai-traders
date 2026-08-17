@@ -113,6 +113,13 @@ class FrontendController extends Controller
             ->where('status', 'active')
             ->findOrFail($id);
 
-        return view('frontend.products.details', compact('product'));
+        $relatedProducts = Product::where('status', 'active')
+            ->where('category_id', $product->category_id)
+            ->whereKeyNot($product->id)
+            ->orderBy('name')
+            ->take(6)
+            ->get();
+
+        return view('frontend.products.details', compact('product', 'relatedProducts'));
     }
 }
