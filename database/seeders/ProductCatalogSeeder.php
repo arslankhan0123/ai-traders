@@ -13,6 +13,32 @@ class ProductCatalogSeeder extends Seeder
      */
     public function run(): void
     {
+        $featureImages = [
+            'industrial-pumps' => 'products/feature_images/industrial-pumps.png',
+            'industrial-engines-and-turbines' => 'products/feature_images/industrial-engines-and-turbines.png',
+            'industrial-fire-hydrants' => 'products/feature_images/industrial-fire-hydrants.png',
+            'oil-field-machinery' => 'products/feature_images/oil-field-machinery.png',
+            'construction-excavators' => 'products/feature_images/construction-excavators.png',
+            'heavy-duty-bulldozers' => 'products/feature_images/heavy-duty-bulldozers.png',
+            'front-loaders' => 'products/feature_images/front-loaders.png',
+            'construction-dump-trucks' => 'products/feature_images/construction-dump-trucks.png',
+            'backhoe-loaders' => 'products/feature_images/backhoe-loaders.png',
+            'bobcat-skid-steer-loaders' => 'products/feature_images/bobcat-skid-steer-loaders.png',
+            'bricks-and-concrete-blocks' => 'products/feature_images/bricks-and-concrete-blocks.png',
+            'construction-steel-and-metal-materials' => 'products/feature_images/construction-steel-and-metal-materials.png',
+            'construction-and-architectural-glass' => 'products/feature_images/construction-and-architectural-glass.png',
+            'timber-and-wood-construction-materials' => 'products/feature_images/timber-and-wood-construction-materials.png',
+            'ceramic-building-materials' => 'products/feature_images/ceramic-building-materials.png',
+            'plastic-and-foam-construction-materials' => 'products/feature_images/plastic-and-foam-construction-materials.png',
+            'food-packaging-equipment' => 'products/feature_images/food-packaging-equipment.png',
+            'food-and-beverage-industrial-mixers' => 'products/feature_images/food-and-beverage-industrial-mixers.png',
+            'food-processing-tanks' => 'products/feature_images/food-processing-tanks.png',
+            'commercial-food-processing-boilers' => 'products/feature_images/commercial-food-processing-boilers.png',
+            'food-processing-industrial-dryers' => 'products/feature_images/food-processing-industrial-dryers.png',
+            'food-and-beverage-processing-filters' => 'products/feature_images/food-and-beverage-processing-filters.png',
+            'commercial-processing-autoclaves' => 'products/feature_images/commercial-processing-autoclaves.png',
+        ];
+
         $catalog = [
             [
                 'category' => ['name' => 'Industrial Equipment', 'slug' => 'industrial-equipment', 'order' => 1],
@@ -97,7 +123,7 @@ class ProductCatalogSeeder extends Seeder
                         'purchase_price' => 0,
                         'sale_price' => 0,
                         'stock_quantity' => 0,
-                        'feature_image' => null,
+                        'feature_image' => $featureImages[$productData['slug']],
                         'status' => 'active',
                     ],
                 );
