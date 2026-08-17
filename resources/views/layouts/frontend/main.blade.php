@@ -76,6 +76,25 @@
         .rts__offcanvas__toggle__close i {
             color: #ffffff !important;
         }
+
+        .rts__offcanvas__header .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .rts__offcanvas__header .logo img {
+            width: 165px !important;
+            max-width: 48vw !important;
+            height: auto !important;
+            max-height: 72px !important;
+            object-fit: contain;
+        }
+
+        @media (max-width: 420px) {
+            .rts__offcanvas__header .logo img {
+                width: 145px !important;
+            }
+        }
     </style>
 </head>
 
@@ -104,7 +123,7 @@
         <div class="rts__offcanvas__wrapper">
             <div class="rts__offcanvas__header">
                 <div class="logo">
-                    <a href="{{ route('home') }}"><img src="{{ asset('logo.png') }}" alt="Logo" style="max-height: 30px; width: auto; transition: all 0.3s ease;"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('logo.png') }}" alt="Alberta International Traders"></a>
                 </div>
                 <div class="rts__offcanvas__toggle__close">
                     <i class="fa-solid fa-xmark"></i>
