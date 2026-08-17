@@ -7,7 +7,7 @@
         <div class="row g-5 align-items-start">
             <div class="col-lg-6">
                 @if($product->feature_image)
-                    <img src="{{ Storage::url($product->feature_image) }}" alt="{{ $product->name }}"
+                    <img src="{{ $product->feature_image_url }}" alt="{{ $product->name }}"
                         class="w-100 rounded-4" style="max-height: 560px; object-fit: cover;">
                 @endif
 
