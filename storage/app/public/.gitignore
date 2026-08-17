@@ -1,5 +1,2 @@
 *
 !.gitignore
-!products/
-!products/feature_images/
-!products/feature_images/*.png

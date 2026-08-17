@@ -373,7 +373,7 @@
                         <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="thumb">
                                 <a href="{{ route('products.details', $product->id) }}"><img
-                                        src="{{ Storage::url($product->feature_image) }}"
+                                        src="{{ $product->feature_image_url }}"
                                         style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
                                         alt="{{ $product->name }}"></a>
                             </div>
@@ -398,7 +398,7 @@
                         <div class="single-blog-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="thumb">
                                 <a href="{{ route('products.details', $product->id) }}"><img
-                                        src="{{ Storage::url($product->feature_image) }}"
+                                        src="{{ $product->feature_image_url }}"
                                         style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;"
                                         alt="{{ $product->name }}"></a>
                             </div>
